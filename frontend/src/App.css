@@ -1,0 +1,129 @@
+/* Make full screen app */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  text-align: center;
+
+  /* Dynamic gradient background */
+  background: linear-gradient(270deg, #4facfe, #00f2fe, #43e97b, #38f9d7);
+  background-size: 800% 800%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Title */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+/* Book Container (Glass effect) */
+.book-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+/* Form */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+form input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  width: 45%;
+}
+
+form button {
+  padding: 10px 15px;
+  background: #43e97b;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.3s;
+}
+
+form button:hover {
+  background: #38f9d7;
+  transform: scale(1.05);
+}
+
+/* Search bar */
+.book-container input[type="text"] {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+/* Book List */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+li:hover {
+  transform: translateX(5px);
+}
+
+/* Buttons inside list */
+li button {
+  margin-left: 8px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+li button:nth-child(2) {
+  background: #f39c12; /* edit */
+}
+li button:nth-child(2):hover {
+  background: #e67e22;
+}
+
+li button:nth-child(3) {
+  background: #e74c3c; /* delete */
+}
+li button:nth-child(3):hover {
+  background: #c0392b;
+}
