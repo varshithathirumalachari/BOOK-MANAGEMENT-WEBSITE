@@ -111,6 +111,13 @@ __pycache__/
 
 ---
 
+## Live Website
+
+Check out the live project here:
+
+<img width="1919" height="820" alt="image" src="https://github.com/user-attachments/assets/c0a9fbe5-5d43-4c21-aa60-e834043cb244" />
+
+---
 ## Contributing
 
 1. Fork the repository.
